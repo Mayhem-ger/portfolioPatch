@@ -1,0 +1,81 @@
+:root {
+  font-family: "Helvetica", monospace;
+  background-color: var(--lightBlue);
+  --darkGrey: #33393D;
+  --yellow: #FFCD24;
+  --blue: #2AABE4;
+  --lightBlue: #9DC8E4;
+  --grey: #666B6E;
+}
+
+
+li {
+  list-style-type: none;
+  margin: 0 2vw;
+  font-size: 3vh;
+  }
+
+a {
+  text-decoration: none;
+  color: var(--darkGrey);
+  padding: 2vw;
+  font-family: monospace;
+}
+
+a:hover {
+  background-color: var(--blue);
+}
+
+nav {
+  width: 100vw;
+  background-color: var(--lightBlue);
+}
+
+ul {
+  margin: 0;
+  padding: 0;
+  display: flex;
+}
+
+body {
+  margin:0;
+}
+
+#projects {
+  display: flex;
+}
+
+.grid {
+  display: grid;
+  grid-template-areas:
+  "navbar navbar navbar"
+  "welcome welcome welcome"
+  "portfolio portfolio portfolio"
+  "cta cta cta"
+  "footer footer footer"
+}
+
+.nav-area {
+  grid-area: navbar;
+  background-color: lightGrey;
+}
+
+.welcome-area {
+  grid-area: welcome;
+  background-color: lightSalmon;
+}
+
+.portfolio-area {
+  grid-area: portfolio;
+  background-color: lightGreen;
+}
+
+.cta-area {
+  grid-area: cta;
+  background-color: lightYellow;
+}
+
+.footer-area {
+  grid-area: footer;
+  background-color: red;
+}
