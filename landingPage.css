@@ -7,14 +7,33 @@
   --grey: #666B6E;
 }
 
+.github-img {
+  display: block;
+  margin: auto;
+  padding: auto;
+  align-items: center;
+  width: 5vw;
+  padding-bottom: 5vh;
+}
+
 .center-headline {
-  font-weight: 1000px;
+  font-weight: 100px;
   text-align: center;
-  font-size: 3em;
+  font-size: 10vw;
   color: white;
   border-style: solid;
+  border-radius: 25px;
   border-color: white;
+  border-width: 0.25em;
+  margin-left: 25%;
   width: 50%;
+}
+
+h2 {
+  text-align: center;
+  font-family: monospace;
+  font-weight: bold;
+  font-size: 4vw;
 }
 
 
@@ -24,21 +43,39 @@ li {
   font-size: 2vh;
   }
 
-.navbar {
+a {
   text-decoration: none;
-  color: var(--darkGrey);
+  color: black;
   font-family: monospace;
-  padding: 2vw;
-  float: right;
+  font-size: 2vw;
 }
 
-a:hover {
+section div a:hover {
+  background-color: var(--darkGrey);
+}
+
+section div a:hover p {
+  color: white;
+}
+
+nav a:hover {
   background-color: var(--blue);
 }
 
-nav {
+.nav {
+  display: flex;
+  justify-content: center;
+  position: fixed;
+  top: 0;
+  left: 0;
   width: 100%;
-  background-color: var(--lightBlue);
+  background-color: var(--yellow);
+  padding: 1em 0.5em 1 0em;
+}
+
+.nav-list {
+  display: flex;
+  margin-right: 2rem;
 }
 
 ul {
@@ -88,10 +125,9 @@ div > img {
 
 .projects-grid {
   display: grid;
-  grid-template-columns: 1fr 1fr 1fr;
+  grid-template-areas: "project1 project2 project3";
   grid-gap: 2em;
   width: 100%;
-  margin: 0 auto;
   max-width: 1280px;
 }
 
@@ -102,7 +138,7 @@ div > img {
 }
 
 .project-title {
-  font-size: 2rem;
+  font-size: 2vw;
   padding: 2rem 0.5rem;
 }
 
@@ -114,7 +150,7 @@ div > img {
 }
 
 .project2 {
-  grid-area: project1;
+  grid-area: project2;
   background-color: lightBlue;
   height: 30vh;
   width: 20vw;
@@ -148,7 +184,6 @@ div > img {
 
 .portfolio-area {
   grid-area: portfolio;
-  background-color: lightGreen;
 
 }
 
@@ -160,4 +195,23 @@ div > img {
 .footer-area {
   grid-area: footer;
   background-color: red;
+}
+
+@media only screen and (max-width: 600px) {
+  .projects-grid {
+    display: grid;
+    grid-template-areas:
+    "project1"
+    "project2"
+    "project3";
+    grid-gap: 2em;
+    width: 100%;
+    padding-right: 2em;
+  }
+
+  .project-image {
+    width: 100%;
+    object-fit:cover;
+  }
+
 }
