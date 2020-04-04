@@ -1,6 +1,5 @@
 :root {
   font-family: "Helvetica", monospace;
-  background-color: var(--lightBlue);
   --darkGrey: #33393D;
   --yellow: #FFCD24;
   --blue: #2AABE4;
@@ -8,10 +7,14 @@
   --grey: #666B6E;
 }
 
-h1 {
-  font-weight: 700;
+.center-headline {
+  font-weight: 1000px;
   text-align: center;
   font-size: 3em;
+  color: white;
+  border-style: solid;
+  border-color: white;
+  width: 50%;
 }
 
 
@@ -127,12 +130,14 @@ div > img {
 
 .nav-area {
   grid-area: navbar;
-  background-color: lightGrey;
+  background-color: var(--lightBlue);
 }
 
 .welcome-area {
   grid-area: welcome;
-  background-color: lightSalmon;
+  background: url(https://images.unsplash.com/photo-1523821741446-edb2b68bb7a0?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=1050&q=80);
+  background-repeat: no-repeat;
+  background-size: cover;
   display: flex;
   flex-direction: column;
   justify-content: center;
