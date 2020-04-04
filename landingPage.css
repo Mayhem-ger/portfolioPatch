@@ -6,20 +6,23 @@
   --blue: #2AABE4;
   --lightBlue: #9DC8E4;
   --grey: #666B6E;
+  padding: 2vw 2vw;
 }
 
 
 li {
   list-style-type: none;
   margin: 0 2vw;
-  font-size: 3vh;
+  font-size: 2vh;
   }
 
-a {
+.navbar {
   text-decoration: none;
   color: var(--darkGrey);
-  padding: 2vw;
   font-family: monospace;
+  padding: 2vw;
+  position: absolut;
+  float: right;
 }
 
 a:hover {
@@ -51,8 +54,31 @@ body {
   "navbar navbar navbar"
   "welcome welcome welcome"
   "portfolio portfolio portfolio"
-  "cta cta cta"
   "footer footer footer"
+  "cta cta cta"
+}
+
+.project-grid {
+  display: grid;
+  grid-template-areas:
+  "project1 project2 project3";
+  justify-content: center;
+  margin:0;
+}
+
+.project1 {
+  grid-area: project1;
+  background-color: grey;
+}
+
+.project2 {
+  grid-area: project2;
+  background-color: blue;
+}
+
+.project3 {
+  grid-area: project3;
+  background-color: red;
 }
 
 .nav-area {
@@ -63,6 +89,10 @@ body {
 .welcome-area {
   grid-area: welcome;
   background-color: lightSalmon;
+  padding-top: 0px;
+  margin-top: 0px;
+  display: block;
+  height: 100vh;
 }
 
 .portfolio-area {
